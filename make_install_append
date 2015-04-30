@@ -1,0 +1,5 @@
+mkdir -p %{buildroot}/usr/lib64
+mkdir -p %{buildroot}/usr/include/libdwarf
+cp libdwarf/*.h %{buildroot}/usr/include/libdwarf
+cp libdwarf/*.so %{buildroot}/usr/lib64/
+
