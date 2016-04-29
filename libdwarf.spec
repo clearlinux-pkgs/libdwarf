@@ -4,7 +4,7 @@
 #
 Name     : libdwarf
 Version  : 20150115
-Release  : 5
+Release  : 6
 URL      : http://www.prevanders.net/libdwarf-20150115.tar.gz
 Source0  : http://www.prevanders.net/libdwarf-20150115.tar.gz
 Summary  : No detailed summary available
