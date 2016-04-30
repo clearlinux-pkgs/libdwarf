@@ -4,12 +4,13 @@
 #
 Name     : libdwarf
 Version  : 20150115
-Release  : 6
+Release  : 7
 URL      : http://www.prevanders.net/libdwarf-20150115.tar.gz
 Source0  : http://www.prevanders.net/libdwarf-20150115.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-2.0 LGPL-2.1
+BuildRequires : elfutils-dev
 
 %description
 To just build libdwarf and dwarfdump one might do:
@@ -25,6 +26,7 @@ cp libdwarf/libdwarf.a      /usr/local/lib
 %package dev
 Summary: dev components for the libdwarf package.
 Group: Development
+Provides: libdwarf-devel
 
 %description dev
 dev components for the libdwarf package.
@@ -35,7 +37,7 @@ dev components for the libdwarf package.
 
 %build
 %configure --disable-static --enable-shared
-make V=1 %{?_smp_mflags}
+make V=1  %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
