@@ -4,7 +4,7 @@
 #
 Name     : libdwarf
 Version  : 20150115
-Release  : 8
+Release  : 9
 URL      : http://www.prevanders.net/libdwarf-20150115.tar.gz
 Source0  : http://www.prevanders.net/libdwarf-20150115.tar.gz
 Summary  : No detailed summary available
@@ -36,10 +36,13 @@ dev components for the libdwarf package.
 %setup -q -n dwarf-20150115
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484685559
 %configure --disable-static --enable-shared
 make V=1  %{?_smp_mflags}
 
 %install
+export SOURCE_DATE_EPOCH=1484685559
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -108,4 +111,4 @@ cp libdwarf/*.so %{buildroot}/usr/lib64/
 /usr/include/libdwarf/pro_section.h
 /usr/include/libdwarf/pro_types.h
 /usr/include/libdwarf/pro_util.h
-/usr/lib64/*.so
+/usr/lib64/libdwarf.so
